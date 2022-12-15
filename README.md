@@ -1,5 +1,5 @@
 
-# PROSPER
+# Codes of data analysis in PROSPER paper
 
 This is a repo containing codes used for simulation and data analyses in the PROSPER paper. For the command line tool of PROSPER, please go to  https://github.com/Jingning-Zhang/PROSPER
 
