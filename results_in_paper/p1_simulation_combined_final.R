@@ -10,15 +10,6 @@ library(readr)
 for(GA in 1:5){
   
 
-
-# theme(axis.text = element_text(size = rel(0.8)),
-#       axis.title = element_text(size = rel(0.9)),
-#       # legend.title = element_text(size = rel(0.8)),
-#       # legend.text = element_text(size = rel(0.8)),
-#       title = element_text(size = rel(1)),
-#       strip.text = element_text(size = rel(0.7))
-# )
-
 My_Theme = theme(
   panel.background = element_blank(), 
   title = element_text(size = 8.5),
@@ -44,8 +35,6 @@ prediction.result$method_vec <- as.character(prediction.result$method_vec)
 melasso <- read_tsv(paste0("/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Manuscript/source_data/simulation/Restuls_GA_",GA,".txt"))
 
 melasso <- melasso[melasso$method_vec %in% c("multi-lassosum_train_from_single_eth (superlearning_combined_R2_cross_ancestry)",
-                                             # "multi-lassosum_train_from_single_eth (lasso_combined_R2_cross_ancestry)",
-                                             # "multi-lassosum_train_from_single_eth (best_R2_across_ancestry)",
                                              "lassosum2",
                                              "EUR lassosum2",
                                              "Weighted lassosum2"),]
@@ -65,8 +54,6 @@ switchflex <- function(x){
               "PRS-CSx (five ancestries)",
               
               "multi-lassosum_train_from_single_eth (superlearning_combined_R2_cross_ancestry)"
-              # "multi-lassosum_train_from_single_eth (lasso_combined_R2_cross_ancestry)"
-              # "multi-lassosum_train_from_single_eth (best_R2_across_ancestry)"
   )){
     y <- switch (x,
                  "Best EUR SNP (CT)" = "EUR CT",
@@ -81,8 +68,7 @@ switchflex <- function(x){
                  "PRS-CSx (five ancestries)" = "PRS-CSx",
                  
                  "multi-lassosum_train_from_single_eth (superlearning_combined_R2_cross_ancestry)" = "PROSPER"
-                 # "multi-lassosum_train_from_single_eth (lasso_combined_R2_cross_ancestry)" = "PROSPER (lasso)"
-                 # "multi-lassosum_train_from_single_eth (best_R2_across_ancestry)" = "PROSPER (best)"
+                 
     )
   }
   return(y)
@@ -93,8 +79,6 @@ Single_ethnic_method <- c("CT","LDpred2","lassosum2")
 EUR_PRS_based_method <- c("EUR CT","EUR LDpred2","EUR lassosum2")
 Multi_ethnic_method_0 <- c("weighted CT","weighted LDpred2","weighted lassosum2")
 Multi_ethnic_method_1 <- c("PRS-CSx","CT-SLEB")
-# Multi_ethnic_method_2 <- c("PROSPER (best)","PROSPER (lasso)","PROSPER (super learning)")
-# Multi_ethnic_method_2 <- c("PROSPER (lasso)","PROSPER (super learning)")
 Multi_ethnic_method_2 <- c("PROSPER")
 
 single.color =  brewer.pal(9, "Blues")[c(3,5,7)]
@@ -282,7 +266,6 @@ library(ggpubr)
          plot=p, device="pdf",
          path="/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Manuscript/figure/simulation/", 
          width=180, height=180, units="mm", dpi=320)
-  
   
 
 }
