@@ -13,5 +13,7 @@ directory name has a subscript of "train_from_single_eth" but it is actually wha
 4. The directory *computation_time* is used to compare the computational time for PRS-CSx and PROSPER using simulated phenotype
 on the chromosome 22. 
 
-5. The script *clean_results.R* is used to summarize predictive R2 on testing data for alternative methods of PROSPER, lassosum2, EUR lassosum2, and wieghted lassosum2. The performance of all other alternative methods are described in a previous paper (https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract). 
+5. The script *clean_results.R* is used to summarize predictive R2 on testing data for alternative methods of PROSPER, lassosum2, 
+EUR lassosum2, and wieghted lassosum2. The performance of all other alternative methods are described in a previous paper
+(https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract). 
 
