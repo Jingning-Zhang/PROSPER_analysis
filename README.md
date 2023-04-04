@@ -9,3 +9,7 @@ This is a repo containing codes used for simulation and data analyses in the PRO
 Preprint manuscript will be put online very soon. Please contact Jingning Zhang (jzhan218@jhu.edu) for citation.
 
 
+## Directory description
+
+1. The directory of *Simulation_final*
+
