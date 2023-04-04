@@ -12,5 +12,7 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 ## Directory description
 
 1. The directory of *Simulation_final* contains the codes used to perform simulation analysis in this manuscript.
-2. The directory of *data_preparation* contains the codes used to clean real data, including UK Biobank, GLGC, and All of Us. The data cleaning and processing of 23andMe data has been described in a previous paper from [Zhang et al.](https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract).
+2. The directory of *data_preparation* contains the codes used to clean real data, including UK Biobank, GLGC, and All of Us. The data cleaning and processing of 23andMe data has been described in a previous paper from [Zhang et al.](https://www.biorxiv.org/content/10.1101/2022.03.24.485519v5.abstract)
+3. The directory of *real_data_analysis* contains the codes used to perform real data analysis in this manuscript. The training data are from 23andMe, GLGC, and All of Us. The tuning and testing data are from 23andMe (for 23andMe training) and UK Biobank (for GLGC and All of Us training). 
+4. The directory of *results_in_paper* contains the codes used to plot figures and create numerical results. 
 
