@@ -1,6 +1,7 @@
 
-Note that the format of codes in the original analysis here and the final package (https://github.com/Jingning-Zhang/PROSPER) 
-is slightly different. The latter one is much well-annotated and cleaned so that people can use it easily.
+Note that the format of codes in the original analysis (here) and the final package (https://github.com/Jingning-Zhang/PROSPER) 
+is slightly different. The latter one is much well-annotated and cleaned so that people can use it easily. Below I will
+provide a description of the codes we used in the original analysis.
 
 1. The directory *lassosum2* is used to perform single-ancestry analysis, which is also the first step in PROSPER.
 
