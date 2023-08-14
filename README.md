@@ -1,7 +1,9 @@
 
 # Codes for data analysis in PROSPER paper
 
-This is a repo containing codes used for simulation and data analyses in the PROSPER paper. For the command line tool of PROSPER, please go to  https://github.com/Jingning-Zhang/PROSPER.
+This is a repo containing codes used for simulation and data analyses in the PROSPER paper. For codes of method comparison with CT, ldpred2, PRS−CSx, and CT−SLEB, please go to https://github.com/andrewhaoyu/multi_ethnic/tree/master.
+
+For the command line tool of PROSPER, please go to https://github.com/Jingning-Zhang/PROSPER.
 
 
 **PROSPER** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
