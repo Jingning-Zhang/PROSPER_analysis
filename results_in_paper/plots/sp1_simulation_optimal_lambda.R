@@ -29,6 +29,7 @@ for(i in 1:length(N_vec)){
 
 dat <- data.frame(N_vec,lambda_best)
 
+library(readr)
 write_tsv(dat, "/Users/jnz_1/Dropbox/PROSPER/Nature_Communications_revision3/Source_Data/Supplementary_Figure_1.txt")
 
 library(ggplot2)
