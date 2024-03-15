@@ -29,6 +29,8 @@ for(i in 1:length(N_vec)){
 
 dat <- data.frame(N_vec,lambda_best)
 
+write_tsv(dat, "/Users/jnz_1/Dropbox/PROSPER/Nature_Communications_revision3/Source_Data/Supplementary_Figure_1.txt")
+
 library(ggplot2)
 source("/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Analysis/Results/codes_plotting/theme_publication.R")
 p = ggplot(dat, aes(x= N_vec, y=lambda_best))+
