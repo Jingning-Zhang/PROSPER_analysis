@@ -17,3 +17,4 @@ Preprint manuscript will be put online very soon. Please contact Jingning Zhang 
 3. The directory of *real_data_analysis* contains the codes used to perform real data analysis in this manuscript. The training data are from 23andMe, GLGC, and All of Us. The tuning and testing data are from 23andMe (for 23andMe training) and UK Biobank (for GLGC and All of Us training). 
 4. The directory of *results_in_paper* contains the codes used to plot figures and create numerical results. 
 5. The directory of *pacakge* contains the codes used to generate the final command line tool. This includes cleaning of scripts, creating example input data, running the software, and finally producing example output results. The final command line tool is provided in https://github.com/Jingning-Zhang/PROSPER.
+6. The directory of *revision1* and *revision2* contains the codes for the revisions of our manuscript for publication.
