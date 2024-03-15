@@ -7,7 +7,7 @@ For the command line tool of PROSPER, please go to https://github.com/Jingning-Z
 
 **PROSPER** is a command line tool based on R programming language. It is a powerful multi-ancestry PRS method that jointly models GWAS summary statistics from multiple populations by penalized regression and ensemble approach to improve the performance in minority populations.
 
-Preprint manuscript will be put online very soon. Please contact Jingning Zhang (jingningzhang238@gmail.com) for citation.
+Preprint manuscript is released at https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10055041/. The peer-reviewed publication will be available soon. Please contact Jingning Zhang (jingningzhang238@gmail.com) if you have any questions regarding the citation.
 
 
 ## Directory Description
