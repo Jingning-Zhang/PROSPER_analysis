@@ -568,7 +568,7 @@ for(GA in 1:5){
                            labels = c("a", "b"),
                            heights = c(0.5,0.5)),
                  p.leg,
-                 ncol = 2, widths = c(0.75,0.25))
+                 ncol = 2, widths = c(0.72,0.28))
   ggsave(filename=paste0("simulation_GA_",GA,".pdf"),
          plot=p, device="pdf",
          path="/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Manuscript/figure/revision2/lassosum_sl/",
