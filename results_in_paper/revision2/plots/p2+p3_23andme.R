@@ -26,16 +26,16 @@ My_Theme = theme(
 source("/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Analysis/Results/codes_plotting/theme_publication.R")
 prediction.result <- readRDS("/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Analysis/23andme/*results_plot/res_Dec.rds") # from /Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Analysis/23andme/*results_plot/plot_Dec.R
 
-Single_ethnic_method <- c("CT","lassosum2")
+Single_ancestry_method <- c("CT","lassosum2")
 EUR_PRS_based_method <- c("EUR CT","EUR lassosum2")
-Multi_ethnic_method_0 <- c("weighted CT","weighted lassosum2")
-Multi_ethnic_method_1 <- c("PRS-CSx","CT-SLEB")
-Multi_ethnic_method_2 <- c("PROSPER")
+Multi_ancestry_method_0 <- c("weighted CT","weighted lassosum2")
+Multi_ancestry_method_1 <- c("PRS-CSx","CT-SLEB")
+Multi_ancestry_method_2 <- c("PROSPER")
 
-prediction.result <- prediction.result[prediction.result$method_vec %in% c(Single_ethnic_method, EUR_PRS_based_method, Multi_ethnic_method_0,Multi_ethnic_method_1, Multi_ethnic_method_2), ]
+prediction.result <- prediction.result[prediction.result$method_vec %in% c(Single_ancestry_method, EUR_PRS_based_method, Multi_ancestry_method_0,Multi_ancestry_method_1, Multi_ancestry_method_2), ]
 
 prediction.result$method_vec <- factor(prediction.result$method_vec,
-                                       levels = c(Single_ethnic_method, EUR_PRS_based_method, Multi_ethnic_method_0,Multi_ethnic_method_1, Multi_ethnic_method_2))
+                                       levels = c(Single_ancestry_method, EUR_PRS_based_method, Multi_ancestry_method_0,Multi_ancestry_method_1, Multi_ancestry_method_2))
 
 
 colnames(prediction.result) <- c("r2.vec","eth.vec","t_vec","method_vec")
@@ -58,19 +58,19 @@ source("/Users/jnz_1/Document/JHU/Research/PRS/MEPRS/Analysis/Results/codes_plot
 
 col_df = tibble(
   colour = colour,
-  method_vec = factor(c(Single_ethnic_method, EUR_PRS_based_method, Multi_ethnic_method_0, Multi_ethnic_method_1,Multi_ethnic_method_2),
-                      levels = c(Single_ethnic_method, EUR_PRS_based_method, Multi_ethnic_method_0, Multi_ethnic_method_1,Multi_ethnic_method_2)),
-  category = case_when(method_vec%in%Single_ethnic_method ~ "Single ethnic method",
+  method_vec = factor(c(Single_ancestry_method, EUR_PRS_based_method, Multi_ancestry_method_0, Multi_ancestry_method_1,Multi_ancestry_method_2),
+                      levels = c(Single_ancestry_method, EUR_PRS_based_method, Multi_ancestry_method_0, Multi_ancestry_method_1,Multi_ancestry_method_2)),
+  category = case_when(method_vec%in%Single_ancestry_method ~ "Single ancestry method",
                        method_vec%in%EUR_PRS_based_method ~ "EUR PRS based method",
-                       method_vec%in%Multi_ethnic_method_0 ~ "Multi ethnic method\n(weighted PRS)",
-                       method_vec%in%Multi_ethnic_method_1 ~ "Multi ethnic method\n(existing methods)",
-                       method_vec%in%Multi_ethnic_method_2 ~ "PROSPER"
+                       method_vec%in%Multi_ancestry_method_0 ~ "Multi ancestry method\n(weighted PRS)",
+                       method_vec%in%Multi_ancestry_method_1 ~ "Multi ancestry method\n(existing methods)",
+                       method_vec%in%Multi_ancestry_method_2 ~ "PROSPER"
   )
 ) %>% 
-  mutate(category = factor(category,levels = c("Single ethnic method",
+  mutate(category = factor(category,levels = c("Single ancestry method",
                                                "EUR PRS based method",
-                                               "Multi ethnic method\n(weighted PRS)",
-                                               "Multi ethnic method\n(existing methods)",
+                                               "Multi ancestry method\n(weighted PRS)",
+                                               "Multi ancestry method\n(existing methods)",
                                                "PROSPER")))
 
 
@@ -213,12 +213,12 @@ ggsave(filename=paste0("23andme_continuous.pdf"),
 
 a <- prediction.result[,c(2,3,1,6,4)]
 a$category <- as.character(a$category)
-a$category[a$category == "Multi ethnic method\n(weighted PRS)"] <- "Multi ethnic method (weighted PRS)"
-a$category[a$category == "Multi ethnic method\n(existing methods)"] <- "Multi ethnic method (existing methods)" 
+a$category[a$category == "Multi ancestry method\n(weighted PRS)"] <- "Multi ancestry method (weighted PRS)"
+a$category[a$category == "Multi ancestry method\n(existing methods)"] <- "Multi ancestry method (existing methods)" 
 
 a$category <- factor(a$category, levels = c("PROSPER" , 
-                                            "Single ethnic method", "EUR PRS based method",
-                                            "Multi ethnic method (weighted PRS)","Multi ethnic method (existing methods)"))
+                                            "Single ancestry method", "EUR PRS based method",
+                                            "Multi ancestry method (weighted PRS)","Multi ancestry method (existing methods)"))
 
 a <- a[order(a$method_vec),]
 a <- a[order(a$category),]
